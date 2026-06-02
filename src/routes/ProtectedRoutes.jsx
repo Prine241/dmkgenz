@@ -18,7 +18,7 @@ export const ProtectedRoute = ({ children }) => {
 export const AdminRoute = ({ children }) => {
   const { user, loading } = useAuth();
   if (loading) return null;
-  const isAdmin = user?.role === 'admin' || user?.email === 'admin@dmkgenzevent2026.org';
+  const isAdmin = user?.role === 'admin' || user?.email?.trim().toLowerCase() === 'admin@dmkgenzevent2026.org';
   return isAdmin ? children : <Navigate to="/login" replace />;
 };
 

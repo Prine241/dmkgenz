@@ -14,7 +14,7 @@ const Admin = () => {
   const [filter, setFilter] = useState('all');
   const [expandedUser, setExpandedUser] = useState(null);
 
-  const isAdmin = currentUser?.role === 'admin' || currentUser?.email === 'admin@dmkgenzevent2026.org';
+  const isAdmin = currentUser?.role === 'admin' || currentUser?.email?.trim().toLowerCase() === 'admin@dmkgenzevent2026.org';
 
   useEffect(() => {
     if (!currentUser || !isAdmin) {

@@ -16,16 +16,17 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = (email, password) => {
+    const normalizedEmail = email.trim().toLowerCase();
     const storedUsers = JSON.parse(localStorage.getItem('dmk_users') || '[]');
-    const user = storedUsers.find(u => u.email === email && u.password === password);
+    const user = storedUsers.find(u => u.email?.toLowerCase() === normalizedEmail && u.password === password);
     if (user) {
       setCurrentUser(user);
       localStorage.setItem('dmk_current_user', JSON.stringify(user));
       return { success: true, user };
     }
     // Admin login
-    if (email === 'admin@dmkgenzevent2026.org' && password === 'Dm2K$GenZ@2026Event!') {
-      const adminUser = { email, role: 'admin', name: 'Admin' };
+    if (normalizedEmail === 'admin@dmkgenzevent2026.org' && password === 'Dm2K$GenZ@2026Event!') {
+      const adminUser = { email: 'admin@dmkgenzevent2026.org', role: 'admin', name: 'Admin' };
       setCurrentUser(adminUser);
       localStorage.setItem('dmk_current_user', JSON.stringify(adminUser));
       return { success: true, user: adminUser };

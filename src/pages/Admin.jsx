@@ -14,13 +14,17 @@ const Admin = () => {
   const [filter, setFilter] = useState('all');
   const [expandedUser, setExpandedUser] = useState(null);
 
+  const isAdmin = currentUser?.role === 'admin' || currentUser?.email === 'admin@dmkgenzevent2026.org';
+
   useEffect(() => {
-    if (!currentUser || currentUser.role !== 'admin') {
+    if (!currentUser || !isAdmin) {
       navigate('/login');
       return;
     }
     setUsers(getAllUsers());
-  }, [currentUser, navigate, getAllUsers]);
+  }, [currentUser, navigate, getAllUsers, isAdmin]);
+
+  if (!currentUser || !isAdmin) return null;
 
   const refresh = () => setUsers(getAllUsers());
 

@@ -6,7 +6,7 @@ import Register from '../pages/Register';
 import Dashboard from '../pages/Dashboard';
 import Admin from '../pages/Admin';
 import CertificatePage from '../pages/CertificatePage';
-import ReferralPage from '../pages/ReferralPage';
+import ReferralPage from '../pages/Referralpage';
 import Navbar from '../components/Navbar';
 import { ProtectedRoute, AdminRoute, GuestRoute } from './ProtectedRoutes';
 

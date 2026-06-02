@@ -1,0 +1,177 @@
+.certificate-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.certificate-preview {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  background: linear-gradient(135deg, #0f0f0f, #1a0808);
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 16px;
+}
+
+.cert-border-top, .cert-border-bottom {
+  position: absolute;
+  left: 0; right: 0;
+  height: 10px;
+}
+
+.cert-border-top { top: 0; background: linear-gradient(90deg, #CC0000, #FFD700, #CC0000); }
+.cert-border-bottom { bottom: 0; background: linear-gradient(90deg, #CC0000, #FFD700, #CC0000); }
+
+.cert-side-left, .cert-side-right {
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 10px;
+}
+
+.cert-side-left { left: 0; background: linear-gradient(180deg, #FFD700, #CC0000, #FFD700); }
+.cert-side-right { right: 0; background: linear-gradient(180deg, #FFD700, #CC0000, #FFD700); }
+
+.cert-inner {
+  border: 1px solid rgba(255,215,0,0.2);
+  border-radius: 8px;
+  padding: 2.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.cert-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 0.5rem;
+}
+
+.cert-flag {
+  display: flex;
+  flex-direction: column;
+  width: 6px;
+  height: 20px;
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.cert-flag div:nth-child(1) { flex: 1; background: #111; }
+.cert-flag div:nth-child(2) { flex: 1; background: #CC0000; }
+.cert-flag div:nth-child(3) { display: none; }
+
+.cert-org {
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+}
+
+.cert-title-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 8px;
+  color: var(--dmk-yellow);
+  line-height: 1;
+}
+
+.cert-title-sub {
+  font-size: 0.9rem;
+  letter-spacing: 5px;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  margin-top: -4px;
+}
+
+.cert-line-deco {
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #CC0000, transparent);
+  margin: 4px 0;
+}
+
+.cert-presented {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.5);
+  font-style: italic;
+}
+
+.cert-name {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.cert-name-underline {
+  width: 200px;
+  height: 1px;
+  background: var(--dmk-yellow);
+  opacity: 0.5;
+}
+
+.cert-body-text {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.5);
+  margin-top: 4px;
+}
+
+.cert-event-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+  color: var(--dmk-yellow);
+}
+
+.cert-venue {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.4);
+}
+
+.cert-footer-row {
+  display: flex;
+  gap: 3rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  width: 100%;
+  justify-content: center;
+}
+
+.cert-footer-col {
+  text-align: center;
+}
+
+.cert-footer-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.3);
+  margin-bottom: 4px;
+}
+
+.cert-footer-val {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--dmk-yellow);
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
+}
+
+.cert-download-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .cert-inner { padding: 2rem 1.5rem; }
+  .cert-title-label { font-size: 2rem; }
+  .cert-name { font-size: 1.4rem; }
+}

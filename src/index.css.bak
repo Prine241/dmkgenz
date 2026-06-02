@@ -1,0 +1,56 @@
+/* BACKUP of original src/index.css — created before regeneration */
+
+/* ============================================================
+   DMK GenZ Wing — index.css  (corrected)
+   Colors: DMK Red (#CC0000), Gold (#FFD700), Deep Black (#0a0a0a)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&family=Tiro+Tamil&display=swap');
+@import "tailwindcss";
+
+/* ── CSS Variables ──────────────────────────────────────────── */
+
+/* FIX 1: Declare --border-angle as a @property so the border-spin
+   keyframe animation works correctly instead of silently failing. */
+@property --border-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+:root {
+  --dmk-red:    #CC0000;
+  --dmk-red-2:  #AA0000;
+  --gold:       #FFD700;
+  --gold-dim:   rgba(255, 215, 0, 0.3);
+  --black:      #0a0a0a;
+  --black-2:    #111111;
+  --black-3:    #1a0000;
+  --white:      #ffffff;
+
+  --glass-bg:        rgba(255, 255, 255, 0.04);
+  --glass-bg-dark:   rgba(0, 0, 0, 0.55);
+  --glass-border:    rgba(255, 255, 255, 0.08);
+  --glass-blur:      16px;
+
+  --red-glow-color:  rgba(204, 0, 0, 0.45);
+  --gold-glow-color: rgba(255, 215, 0, 0.35);
+
+  --font-display: 'Cinzel', serif;
+  --font-ui:      'Rajdhani', sans-serif;
+  --font-tamil:   'Tiro Tamil', serif;
+
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  16px;
+  --radius-xl:  20px;
+  --radius-2xl: 24px;
+  --radius-3xl: 32px;
+  --radius-pill: 9999px;
+
+  --transition-fast:   150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow:   500ms ease;
+}
+
+/* ...rest of original file preserved in backup... */

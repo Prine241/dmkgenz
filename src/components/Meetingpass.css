@@ -1,0 +1,231 @@
+.meeting-pass-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.meeting-pass {
+  width: 100%;
+  max-width: 600px;
+  background: linear-gradient(135deg, #0f0f0f, #1a0a0a);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,215,0,0.1);
+  position: relative;
+}
+
+.pass-header {
+  position: relative;
+  overflow: hidden;
+}
+
+.pass-flag-strip {
+  display: flex;
+  height: 8px;
+}
+
+.pf-black { flex: 1; background: #111; }
+.pf-red { flex: 1; background: #CC0000; }
+.pf-yellow { display: none; }
+
+.pass-header-content {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  gap: 14px;
+  background: linear-gradient(135deg, rgba(204,0,0,0.15), rgba(0,0,0,0));
+}
+
+.pass-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2rem;
+  letter-spacing: 4px;
+  background: linear-gradient(135deg, #CC0000, #FFD700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pass-event-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.pass-event-sub {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.45);
+  font-family: 'Noto Sans Tamil', sans-serif;
+}
+
+.pass-type {
+  margin-left: auto;
+}
+
+.pass-type span {
+  background: rgba(255, 215, 0, 0.12);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  color: var(--dmk-yellow);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.pass-body {
+  display: flex;
+  padding: 20px;
+  gap: 0;
+}
+
+.pass-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.pass-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #CC0000, #FFD700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  overflow: hidden;
+  border: 2px solid rgba(255,215,0,0.3);
+}
+
+.pass-avatar img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+.pass-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  margin-top: 4px;
+}
+
+.pass-regid {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: var(--dmk-yellow);
+}
+
+.pass-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 4px;
+}
+
+.pass-detail {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.55);
+}
+
+.pass-status {
+  margin-top: 8px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.pass-status.approved {
+  background: rgba(0, 200, 100, 0.15);
+  color: #00c864;
+  border: 1px solid rgba(0, 200, 100, 0.3);
+}
+
+.pass-status.pending {
+  background: rgba(255, 215, 0, 0.1);
+  color: var(--dmk-yellow);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+}
+
+.pass-status.rejected {
+  background: rgba(204, 0, 0, 0.15);
+  color: #ff4444;
+  border: 1px solid rgba(204, 0, 0, 0.3);
+}
+
+.pass-divider {
+  width: 1px;
+  margin: 0 20px;
+  background: repeating-linear-gradient(to bottom, rgba(255,215,0,0.2) 0px, rgba(255,215,0,0.2) 8px, transparent 8px, transparent 14px);
+  position: relative;
+}
+
+.pass-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.pass-qr-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.4);
+}
+
+.pass-qr {
+  background: rgba(255,215,0,0.04);
+  border: 1px solid rgba(255,215,0,0.15);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.pass-qr-id {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.5);
+}
+
+.pass-district {
+  font-size: 0.78rem;
+  color: rgba(255,215,0,0.6);
+  font-weight: 600;
+}
+
+.pass-footer {
+  padding: 10px 20px;
+  background: rgba(255,215,0,0.04);
+  border-top: 1px solid rgba(255,215,0,0.1);
+  text-align: center;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 1px;
+}
+
+.download-pass-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+}
+
+@media (max-width: 500px) {
+  .pass-body { flex-direction: column; }
+  .pass-divider { width: 100%; height: 1px; margin: 12px 0; background: repeating-linear-gradient(to right, rgba(255,215,0,0.2) 0px, rgba(255,215,0,0.2) 8px, transparent 8px, transparent 14px); }
+  .pass-right { width: 100%; }
+}

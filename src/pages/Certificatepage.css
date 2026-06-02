@@ -1,0 +1,65 @@
+.cert-page {
+  min-height: 100vh;
+}
+
+.cert-page-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 5rem;
+}
+
+.cert-page-header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.5);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 1.5rem;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.back-btn:hover {
+  color: white;
+  border-color: rgba(255,255,255,0.25);
+}
+
+.cert-locked {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 2rem;
+}
+
+.cert-locked-card {
+  padding: 3rem;
+  text-align: center;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cert-lock-icon { font-size: 3rem; }
+
+.cert-locked-card h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.cert-locked-card p {
+  color: rgba(255,255,255,0.55);
+  font-size: 0.9rem;
+}

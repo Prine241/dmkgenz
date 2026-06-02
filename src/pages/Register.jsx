@@ -76,10 +76,10 @@ const Register = () => {
 
     setLoading(true);
     await new Promise(r => setTimeout(r, 1000));
-    const result = register({ ...form, profilePhoto });
+    const result = await register({ ...form, profilePhoto });
     setLoading(false);
 
-    if (result.success) navigate('/dashboard');
+    if (result?.success) navigate('/dashboard');
     else setErrors({ general: result.message });
   };
 

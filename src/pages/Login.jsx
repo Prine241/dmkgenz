@@ -32,7 +32,7 @@ const Login = () => {
 
     setLoading(true);
     await new Promise(r => setTimeout(r, 800));
-    const result = login(form.email, form.password);
+    const result = await login(form.email, form.password);
     setLoading(false);
 
     if (result.success) {

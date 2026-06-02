@@ -21,12 +21,21 @@ const Admin = () => {
       navigate('/login');
       return;
     }
-    setUsers(getAllUsers());
+
+    const loadUsers = async () => {
+      const allUsers = await getAllUsers();
+      setUsers(allUsers);
+    };
+
+    loadUsers();
   }, [currentUser, navigate, getAllUsers, isAdmin]);
 
   if (!currentUser || !isAdmin) return null;
 
-  const refresh = () => setUsers(getAllUsers());
+  const refresh = async () => {
+    const allUsers = await getAllUsers();
+    setUsers(allUsers);
+  };
 
   const handleApprove = (id) => {
     updateUserStatus(id, 'approved');

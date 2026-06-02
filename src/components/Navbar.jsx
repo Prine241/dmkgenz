@@ -25,8 +25,9 @@ const Navbar = () => {
     navigate('/');
   };
 
+  const isAdminUser = currentUser?.role === 'admin' || currentUser?.email?.trim().toLowerCase() === 'admin@dmkgenzevent2026.org';
   const navLinks = currentUser
-    ? currentUser.role === 'admin'
+    ? isAdminUser
       ? [{ to: '/admin', label: 'Admin Panel', icon: <FiSettings /> }]
       : [
           { to: '/dashboard', label: 'Dashboard', icon: <FiUser /> },

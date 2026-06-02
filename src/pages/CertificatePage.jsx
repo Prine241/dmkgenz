@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 import useAuth from '../hooks/useAuth';
 import Certificate from '../components/Certificate';
-import './CertificatePage.css';
+import './Certificatepage.css';
 
 const CertificatePage = () => {
   const { currentUser } = useAuth();

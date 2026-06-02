@@ -3,7 +3,7 @@ import { QRCodeCanvas } from 'qrcode.react';
 import { motion } from 'framer-motion';
 import { FiDownload, FiMapPin, FiCalendar, FiClock } from 'react-icons/fi';
 import { generateQRData } from '../utils/generateQRCode';
-import './MeetingPass.css';
+import './Meetingpass.css';
 
 const MeetingPass = ({ user }) => {
   const passRef = useRef(null);

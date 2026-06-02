@@ -106,7 +106,7 @@ const Admin = () => {
     pdf.save('DMK-GENZ-Users-Report.pdf');
   };
 
-  if (!currentUser || currentUser.role !== 'admin') return null;
+  if (!currentUser || !isAdmin) return null;
 
   return (
     <div className="page-container admin-page">
@@ -116,10 +116,16 @@ const Admin = () => {
             <div>
               <h1 className="admin-title gradient-text">Admin Panel</h1>
               <p className="admin-subtitle">DMK GenZ Meeting 2026 — Registration Management</p>
+              <p className="admin-note">Click any row to expand full participant details. Registrations are loaded from this browser's stored data.</p>
             </div>
-            <button className="btn-primary export-btn" onClick={exportPDF}>
-              <FiDownload /> Export PDF
-            </button>
+            <div className="admin-actions">
+              <button className="btn-secondary refresh-btn" onClick={refresh}>
+                <FiClock /> Refresh
+              </button>
+              <button className="btn-primary export-btn" onClick={exportPDF}>
+                <FiDownload /> Export PDF
+              </button>
+            </div>
           </div>
         </motion.div>
 
@@ -162,8 +168,12 @@ const Admin = () => {
 
         {/* Users Table */}
         <motion.div className="users-table-wrapper glass-card" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
-          {filtered.length === 0 ? (
-            <div className="no-users">No users found</div>
+          {users.length === 0 ? (
+            <div className="admin-empty-note">
+              No registrations were found in this browser. Please register clients in the same browser or clear storage and re-test.
+            </div>
+          ) : filtered.length === 0 ? (
+            <div className="no-users">No users match the search or filter.</div>
           ) : (
             <table className="users-table">
               <thead>
